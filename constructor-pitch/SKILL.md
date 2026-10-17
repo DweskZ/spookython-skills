@@ -1,10 +1,10 @@
 ---
 name: constructor-pitch
-description: "Trigger: armar pitch, construir pitch, escribir mi pitch, guion del pitch, diapositivas del pitch, SpookyThon. Builds a 5-minute SpookyThon pitch from facts the team supplies; never invents the user, numbers, or demo."
+description: "Trigger: armar pitch, construir pitch, escribir mi pitch, guion del pitch, proyecto ya hecho, SpookyThon. Builds a 5-minute pitch from a repo or from facts the team supplies; never invents the user, numbers, or demo."
 license: Apache-2.0
 metadata:
   author: "DweskZ"
-  version: "1.3"
+  version: "1.4"
 ---
 
 ## Activation Contract
@@ -14,7 +14,7 @@ Load when a SpookyThon 2026 team asks to write, build, structure, or draft its 5
 ## Hard Rules
 
 - Reply in Spanish. The questions and the notes follow `references/voz.md`. The script itself is first person plural, the way the team will say it. Template headings stay.
-- A user is one named person, with a role, a place, and a moment. "Todos", "la comunidad", "los ciudadanos", "los dueños", "los clientes", "la gente" or "los usuarios" is not a user. Ask for a name and stop.
+- A user is one named person, with a role, a place, and a moment. "Todos", "la comunidad", "los ciudadanos", "los dueños", "los clientes", "la gente" or "los usuarios" is not a user. If there is no project to read, ask for a name and stop. If there is a repo, README, or code, keep going and mark the name `[PENDIENTE: nombre]`.
 - Never invent the person, the contrast numbers, their source, the demo flow, the momento wow, the AWS services, or the cost. A number without a source the team stated is `[PENDIENTE: fuente]`, not a line in the script.
 - Ask for every missing input in one grouped message, then stop. Do not continue to a later step in that same reply.
 - Spoken words, excluding headings and `[PENDIENTE]` markers: target 400 to 500, ceiling 550. Tramo 4 narration stays under 80 words, because the team shows that block. Report the count and the time at 140 words per minute.
@@ -26,14 +26,15 @@ Load when a SpookyThon 2026 team asks to write, build, structure, or draft its 5
 
 | Input | Action |
 |---|---|
-| No challenge sentence, or the user has no name | Ask only for the missing gate item, then stop |
+| Repo, README, or code of a project already built | Read it. Build the script from what it states. Name, numbers, cost, and roles stay `[PENDIENTE]` unless they are written there. Put the missing questions under Pendientes |
+| Chat only, no project, and no named user | Ask only for the missing gate item, then stop |
 | Gate passed, any of the ten inputs missing | Extract what they already wrote. Ask `references/entrevista.md` for the missing items only, then stop |
 | All inputs present, or the team says to continue with placeholders | Build with `assets/guion-pitch.md` |
 | Team asks to change one tramo | Edit only that tramo |
 
 ## Execution Steps
 
-1. Gate. Stop if it fails.
+1. If the input is an existing project, read it and continue. If it is only a chat and the gate fails, stop.
 2. Match the ten inputs in `references/entrevista.md` to the message. Ask once for the gaps. Stop.
 3. Write the seven tramos in `references/estructura-pitch.md` from the team's facts only. Name the demo peak "momento wow". If they did not describe one, mark `[PENDIENTE: momento wow]` and do not invent it.
 4. Count spoken words only. If over 550, cut tramos 5 and 6 first. Shorten tramo 4 narration to under 80 words without deleting the flow.

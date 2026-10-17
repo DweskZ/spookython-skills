@@ -4,7 +4,7 @@ description: "Trigger: evaluar pitch, simular jurado, practicar pitch, preguntas
 license: Apache-2.0
 metadata:
   author: "DweskZ"
-  version: "1.4"
+  version: "1.5"
 ---
 
 ## Activation Contract
@@ -26,7 +26,8 @@ Load when a SpookyThon 2026 team asks to evaluate, rehearse, or judge a pitch, a
 
 | Input | Action |
 |---|---|
-| No challenge sentence, or the user has no name | Ask only for the missing gate item, then stop |
+| Pitch from an existing project, person still `[PENDIENTE]` | Door verdict: falta el nombre. Score the rest. `[PENDIENTE]` is ausente. Then ask the three questions and stop |
+| Chat only, no project, and no named user | Ask only for the missing gate item, then stop |
 | Challenge not assigned yet | Practice mode: the team picks a hypothetical challenge, then continue |
 | "Cómo estudio" or "qué preparo" | Study mode: a three-step plan from `references/estructura-pitch.md` and `references/psicologia-jurado.md`. Do not score. Stop |
 | Pitch received, three questions not asked yet | Steps 1 to 4. Send the questions. Stop. No Tres cambios and no Veredicto |
