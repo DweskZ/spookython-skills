@@ -1,6 +1,6 @@
 # Los diez datos que el equipo tiene que dar
 
-El constructor no inventa ninguno de estos. Si falta alguno, se pregunta una sola vez, todos juntos, y se espera. Si el equipo decide seguir sin un dato, ese dato queda como `[PENDIENTE: ...]` en Pendientes, no como una frase del guion. Una persona sin nombre no se inventa. El rol que el proyecto ya dice sí se puede hablar. Un número sin fuente no cuenta y queda `[PENDIENTE: fuente]`.
+El constructor no inventa ninguno de estos. Si el insumo es un repo, un README o código, entrega el guion en esa misma respuesta y deja lo que falta en Pendientes. No espera. Si el insumo es solo un chat y falta un dato, pregunta una sola vez, todos juntos, y se detiene. Un dato que falta queda como `[PENDIENTE: ...]` en Pendientes, no como una frase del guion. Una persona sin nombre no se inventa. El rol que el proyecto ya dice sí se puede hablar. Un número sin fuente no cuenta y queda `[PENDIENTE: fuente]`. Un paso del flujo no es un momento wow.
 
 | # | Dato | Pregunta exacta | Por qué no se inventa | Tramo |
 | --- | --- | --- | --- | --- |

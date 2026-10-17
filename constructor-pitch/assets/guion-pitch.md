@@ -8,10 +8,12 @@ Plantilla de salida. Completar cada sección; no agregar secciones nuevas.
 - Persona: {nombre, rol, lugar, momento}
 - Contraste: {número hoy} frente a {número esperado}. Fuente: {fuente}
 - Flujo de la demo: {una frase}. Momento wow: {segundo o acción}
-- Servicios de AWS: {servicio: qué hace}, {servicio: qué hace}
+- Servicios: {servicio: qué hace}, {servicio: qué hace}. Si no son de AWS, nombrar los que el proyecto usa.
 - Presentan: {quién habla en qué tramo}
 
 ## Guion
+
+Si un tramo no tiene texto hablado, no incluyas su encabezado. Anótalo en Pendientes.
 
 ### 0:00 a 0:30 · La persona y su dolor · habla {nombre}
 
@@ -27,7 +29,7 @@ Plantilla de salida. Completar cada sección; no agregar secciones nuevas.
 
 ### 1:20 a 3:20 · Demo · habla {nombre}
 
-{Qué se dice mientras se muestra cada paso del flujo. Marcar el momento wow. Este tramo se muestra: pocas frases.}
+{Qué se dice mientras se muestra cada paso del flujo. Este tramo se muestra: pocas frases. Escribir "momento wow" solo si el material dice qué cambia en la pantalla.}
 
 ### 3:20 a 4:00 · Lo técnico que pesa · habla {nombre}
 
@@ -60,7 +62,7 @@ Máximo 10. Nunca más de tres líneas de texto por diapositiva.
 
 ## Conteo
 
-Palabras habladas: {N}. Tiempo hablado a 140 palabras por minuto: {M:SS}. El bloque de demo son unos dos minutos de mostrar, así que el guion hablado cabe entre 400 y 500 palabras. Techo: 550. {Entra / Se pasa: qué se cortó.}
+Palabras habladas: {N}, contadas al separar el texto hablado por espacios. Tiempo a 140 palabras por minuto: {M:SS}. Si N es menor que 250, la primera frase es: "Esto no es un pitch de 5 minutos." El bloque de demo son unos dos minutos de mostrar. Objetivo con los datos completos: 400 a 500. Techo: 550. {Entra / Se pasa: qué se cortó / Corto: qué pendiente lo dejó así.}
 
 ## Pendientes
 

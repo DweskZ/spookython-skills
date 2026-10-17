@@ -4,7 +4,7 @@ description: "Trigger: armar pitch, construir pitch, escribir mi pitch, guion de
 license: Apache-2.0
 metadata:
   author: "DweskZ"
-  version: "1.5"
+  version: "1.6"
 ---
 
 ## Activation Contract
@@ -17,9 +17,10 @@ Load when a SpookyThon 2026 team asks to write, build, structure, or draft its 5
 - A user is one named person, with a role, a place, and a moment. "Todos", "la comunidad", "los ciudadanos", "los dueños", "los clientes", "la gente" or "los usuarios" is not a user. If there is no project to read, ask for a name and stop. If there is a repo, README, or code, keep going and mark the name `[PENDIENTE: nombre]`.
 - Never invent the person, the contrast numbers, their source, the demo flow, the momento wow, the AWS services, or the cost. A number without a source the team stated is `[PENDIENTE: fuente]`, not a line in the script.
 - You may speak the role the project already states ("un estudiante"). You may not invent a name, a city, or a biography.
-- Pendientes are not spoken. A tramo with no fact has no paragraph. The technical tramo names the services the project actually uses. If none are AWS, say those. Do not put "falta AWS" in the script.
-- Do not pad to 400 words. If the script is short, report the count and the pendientes that kept it short.
-- Ask for every missing input in one grouped message, then stop. Do not continue to a later step in that same reply.
+- Pendientes are not spoken. A tramo with no fact has no heading and no paragraph. The technical tramo names the services the project actually uses. If none are AWS, say those. Do not put "falta AWS" in the script.
+- A pipeline step, a feature, or a service name is not a momento wow. Write those words only when the source says what the audience sees change. Otherwise the phrase does not appear.
+- Do not pad to 400 words. If the spoken count is under 250, the first sentence of Conteo is "Esto no es un pitch de 5 minutos." Then name the pendientes that kept it short.
+- With no project to read, ask once for every gap, then stop. With a repo, README, or code, deliver the script in that same reply. Gaps go under Pendientes. Do not wait.
 - Spoken words, excluding headings and `[PENDIENTE]` markers: target 400 to 500, ceiling 550. Tramo 4 narration stays under 80 words, because the team shows that block. Report the count and the time at 140 words per minute.
 - Maximum 10 slides, one idea per slide, no list longer than three items. Return the markdown template only.
 - Use only the four public criteria in `references/criterios-publicos.md`.
@@ -38,9 +39,9 @@ Load when a SpookyThon 2026 team asks to write, build, structure, or draft its 5
 ## Execution Steps
 
 1. If the input is an existing project, read it and continue. If it is only a chat and the gate fails, stop.
-2. Match the ten inputs in `references/entrevista.md` to the message. Ask once for the gaps. Stop.
-3. Write the seven tramos in `references/estructura-pitch.md` from the team's facts only. Name the demo peak "momento wow". If they did not describe one, mark `[PENDIENTE: momento wow]` and do not invent it.
-4. Count spoken words only. If over 550, cut tramos 5 and 6 first. Shorten tramo 4 narration to under 80 words without deleting the flow.
+2. Match the ten inputs in `references/entrevista.md`. Repo: write the gaps into Pendientes and continue. Chat only: ask once and stop.
+3. Write a spoken paragraph only for a tramo that has a fact from the team or the repo. Do not emit an empty tramo. Do not label a step "momento wow" unless the source describes the change on screen. If it does not, add `[PENDIENTE: momento wow]` under Pendientes only.
+4. Count spoken words by splitting those paragraphs on whitespace. Time is that count divided by 140, shown as M:SS. If over 550, cut tramos 5 and 6 first. Keep tramo 4 narration under 80 words without deleting the flow.
 5. Derive at most 10 slides and the speaker notes. Assign speakers from the roles they gave. If roles are missing, use one speaker and `[PENDIENTE: quién habla]`.
 6. Deliver `assets/guion-pitch.md`. Before sending, delete any spoken sentence whose only job is to say that something is missing. Check that every number in the script appears with its source under Datos usados. If it does not, replace it with `[PENDIENTE: fuente]`.
 
