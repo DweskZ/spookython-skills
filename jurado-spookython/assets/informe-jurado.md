@@ -52,4 +52,4 @@ Ordenados por impacto en la nota. Cada uno dice qué cambiar, en qué tramo, y q
 
 ## Veredicto
 
-{Una frase. Qué les sobra, qué les falta, y si el jurado real los pondría en el podio hoy.}
+{Una frase que podrían repetir al salir: qué vieron y qué les falta para el podio.}

@@ -1,10 +1,10 @@
 # constructor-pitch
 
-Una skill que construye el guion de tu pitch de 5 minutos para la SpookyThon 2026 a partir de lo que solo tu equipo sabe: la persona, los números, la demo, los servicios de AWS. No inventa nada de eso. Diagrama, cronometra y reparte quién habla.
+Arma el guion de 5 minutos con lo que el equipo ya sabe: la persona, los números, la demo y los servicios. Pone los tiempos y quién habla. Si un dato no está, el guion dice pendiente.
 
-Es la pareja de `jurado-spookython`: una construye, la otra critica. El ciclo es construir, pasar por el jurado, corregir.
+Después pásenlo por `jurado-spookython`.
 
-Funciona en cualquier agente que soporte el estándar abierto Agent Skills: Kiro, Claude Code, Codex, Cursor y otros.
+Funciona en Kiro, Claude Code, Codex, Cursor y en cualquier agente que lea Agent Skills.
 
 ## Instalar
 
@@ -28,13 +28,9 @@ En Kiro también puedes invocarla con `/constructor-pitch`.
 
 ## El flujo
 
-1. **La puerta.** Pide tu reto en una oración y tu usuario en una oración. Sin persona concreta no avanza.
-2. **La entrevista.** Revisa los diez datos que necesita y te pregunta los que faltan, todos juntos, una sola vez.
-3. **El guion.** Siete tramos con tiempos, quién habla en cada uno, entre 400 y 500 palabras habladas para que queden unos dos minutos de demo, máximo 10 diapositivas, notas para el presentador.
-4. **Los pendientes.** Lo que no diste queda marcado como pendiente, no inventado.
+1. Pide el reto en una oración y una persona con nombre. Sin eso no sigue.
+2. Mira los diez datos y pregunta los que faltan, todos juntos, una sola vez.
+3. Devuelve siete tramos con tiempos y quién habla. Lo hablado queda entre 400 y 500 palabras, para dejar unos dos minutos de demo. Hasta diez diapositivas, con el contenido de cada una, y notas para quien presenta.
+4. Lo que no contaron queda escrito como pendiente.
 
-## Qué no hace
-
-- No inventa la persona, los números, la demo ni los servicios. Eso es tuyo.
-- No evalúa ni puntúa. Para eso está `jurado-spookython`.
-- No diseña diapositivas. Te da el contenido de cada una.
+La nota la pone `jurado-spookython`. Aquí no hay puntaje.

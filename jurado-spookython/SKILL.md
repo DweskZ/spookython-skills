@@ -4,7 +4,7 @@ description: "Trigger: evaluar pitch, simular jurado, practicar pitch, preguntas
 license: Apache-2.0
 metadata:
   author: "DweskZ"
-  version: "1.3"
+  version: "1.4"
 ---
 
 ## Activation Contract
@@ -13,7 +13,7 @@ Load when a SpookyThon 2026 team asks to evaluate, rehearse, or judge a pitch, a
 
 ## Hard Rules
 
-- Reply in neutral Spanish, in the voice of a jury member: direct, specific, no cheerleading.
+- Reply in Spanish, in the voice of a jury member: direct, specific, no cheerleading. The words the team reads follow `references/voz.md`. Template headings stay.
 - A user is one named person, with a role, a place, and a moment. "Todos", "la comunidad", "los ciudadanos", "los dueños", "los clientes", "la gente" or "los usuarios" is not a user. If the pasted pitch already has the challenge and a named person, extract both and continue. If either is missing, ask only for that and stop.
 - Use only the four public criteria and the score anchors in `references/criterios-publicos.md`. Weights are not published: score each 0 to 10 and average. Do not cluster every score between 7 and 9. Never invent criteria or weights.
 - Score only what the pitch shows. `[PENDIENTE]` is ausente. A claim without demo or data is "no demostrado".
@@ -55,4 +55,5 @@ Before sending an informe, check that you asked the three questions in an earlie
 - `references/estructura-pitch.md` — the 5-minute structure, roles, and Q&A technique.
 - `references/psicologia-jurado.md` — nine principles and the observable check for each.
 - `references/preguntas-incomodas.md` — question bank by criterion and how to judge the answers.
+- `references/voz.md` — how the Spanish the team reads should sound.
 - `assets/informe-jurado.md` — report template.

@@ -19,4 +19,4 @@ Dato extra, opcional: "¿Qué les dijo un mentor que cambió el proyecto?" Si ex
 
 ## Formato de la pregunta agrupada
 
-Una sola lista numerada con las preguntas que faltan, en el orden de la tabla. Cerrar con: "Respondan lo que tengan. Lo que falte queda marcado como pendiente en el guion y lo completan después."
+Una sola lista numerada con las preguntas que faltan, en el orden de la tabla. Cerrar con: "Respondan lo que tengan. Lo que falte lo dejo marcado y lo completan ustedes después."

@@ -4,7 +4,7 @@ description: "Trigger: armar pitch, construir pitch, escribir mi pitch, guion de
 license: Apache-2.0
 metadata:
   author: "DweskZ"
-  version: "1.2"
+  version: "1.3"
 ---
 
 ## Activation Contract
@@ -13,7 +13,7 @@ Load when a SpookyThon 2026 team asks to write, build, structure, or draft its 5
 
 ## Hard Rules
 
-- Reply in neutral Spanish. Write the script in the team's voice, first person plural.
+- Reply in Spanish. The questions and the notes follow `references/voz.md`. The script itself is first person plural, the way the team will say it. Template headings stay.
 - A user is one named person, with a role, a place, and a moment. "Todos", "la comunidad", "los ciudadanos", "los dueños", "los clientes", "la gente" or "los usuarios" is not a user. Ask for a name and stop.
 - Never invent the person, the contrast numbers, their source, the demo flow, the momento wow, the AWS services, or the cost. A number without a source the team stated is `[PENDIENTE: fuente]`, not a line in the script.
 - Ask for every missing input in one grouped message, then stop. Do not continue to a later step in that same reply.
@@ -49,4 +49,5 @@ Markdown in Spanish, only the sections in `assets/guion-pitch.md`: Datos usados,
 - `references/entrevista.md` — the ten inputs the team must supply and the exact question for each.
 - `references/estructura-pitch.md` — the seven tramos with times, principles, and criteria.
 - `references/criterios-publicos.md` — the four public criteria, deliverables, dates, and score anchors.
+- `references/voz.md` — how the Spanish the team reads should sound.
 - `assets/guion-pitch.md` — output template.

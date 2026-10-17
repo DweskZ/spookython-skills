@@ -1,8 +1,8 @@
 # jurado-spookython
 
-Una skill que se comporta como el jurado de la SpookyThon 2026. Le pegas tu pitch, te hace las preguntas incómodas, te puntúa con los cuatro criterios públicos y te devuelve tres cambios concretos.
+Se porta como jurado de la SpookyThon 2026. Le pegas el pitch, te hace tres preguntas, pone nota con los cuatro criterios públicos y te deja tres cambios.
 
-Funciona en cualquier agente que soporte el estándar abierto Agent Skills: Kiro, Claude Code, Codex, Cursor y otros. La carpeta es la skill; lo único que cambia es dónde la copias.
+Funciona en Kiro, Claude Code, Codex, Cursor y en cualquier agente que lea Agent Skills. La carpeta es la skill. Cambia solo el lugar donde la copias.
 
 ## Instalar
 
@@ -40,13 +40,9 @@ Si tu equipo todavía no recibió su reto, puedes practicar con un reto hipotét
 
 ## El flujo
 
-1. **La puerta.** Antes de evaluar, el jurado pide tu reto en una oración y tu usuario en una oración: una persona concreta, con rol y situación. Si respondes "la comunidad" o "todos", no avanza.
-2. **El pitch.** Mapea tu texto a los siete tramos del pitch de 5 minutos, estima el tiempo hablado, puntúa los cuatro criterios públicos con evidencia y te hace tres preguntas incómodas.
-3. **Las respuestas.** Respondes las tres preguntas como lo harías frente al jurado real. El simulador juzga si hay evidencia, honestidad o bluff.
-4. **El informe.** Estructura, criterios, preguntas y exactamente tres cambios ordenados por impacto.
+1. Primero pide el reto en una oración y una persona con nombre, rol y situación. Si contestan "la comunidad" o "todos", no sigue.
+2. Lee el pitch, lo parte en los siete tramos, estima el tiempo hablado, pone nota y hace tres preguntas.
+3. Ustedes responden como lo harían frente al jurado. Ahí mira si hay un dato, un "no lo sé" con plan, o un invento.
+4. Después llega el informe: tres cambios, del que más mueve la nota al que menos.
 
-## Qué no hace
-
-- No reescribe tu pitch. Da cambios, no reemplazos.
-- No inventa la persona, el número de contraste ni la demo por ti. Eso lo decides tú.
-- No conoce ponderaciones ni rúbricas internas. Usa solo lo que la organización publicó: Uso de AWS, Impacto, Pitch y Demo.
+El pitch lo reescriben ustedes. Aquí reciben el cambio y, como mucho, una frase de ejemplo. La persona, el número y la demo salen de lo que ustedes contaron. La nota usa los cuatro criterios que publicó la organización. Los pesos no están publicados.
