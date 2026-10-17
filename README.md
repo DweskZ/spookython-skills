@@ -4,13 +4,20 @@ Dos carpetas. Una escribe el guion. La otra lo critica. Funcionan en Kiro y en c
 
 ## Cómo se usan
 
-1. Copien las dos carpetas a `.kiro/skills/` dentro de su proyecto.
-2. En el chat escriban `Arma mi pitch` o `Evalúa mi pitch`.
-3. Respondan lo que pregunta. Lo que no sepan queda marcado como pendiente. Ninguna de las dos inventa a la persona, los números ni la demo.
+Díganle a su agente, con este enlace:
 
-El orden: primero `constructor-pitch`, después `jurado-spookython`.
+> Descarga e instala estas skills: https://github.com/DweskZ/spookython-skills
 
-En Kiro también pueden invocarlas con `/constructor-pitch` y `/jurado-spookython`.
+El agente deja las dos carpetas en el proyecto. Después escriben `Arma mi pitch` o `Evalúa mi pitch`. Lo que no sepan queda marcado como pendiente. Ninguna de las dos inventa a la persona, los números ni la demo.
+
+El orden: primero `constructor-pitch`, después `jurado-spookython`. En Kiro también pueden invocarlas con `/constructor-pitch` y `/jurado-spookython`.
+
+## Si un agente lee esto para instalarlas
+
+1. Descarga este repositorio.
+2. Copia las carpetas `constructor-pitch` y `jurado-spookython` completas, con `references/` y `assets/`, a la carpeta de skills del proyecto. En Kiro es `.kiro/skills/`. En Claude Code es `.claude/skills/`. Si es otro agente, usa la carpeta donde ese agente lee `SKILL.md`.
+3. No instales dependencias. No hace falta.
+4. Confirma las dos rutas y dile al usuario que ya puede escribir `Arma mi pitch` o `Evalúa mi pitch`.
 
 ## Qué hace cada una
 

@@ -6,7 +6,9 @@ Funciona en cualquier agente que soporte el estándar abierto Agent Skills: Kiro
 
 ## Instalar
 
-Copia la carpeta `jurado-spookython` completa (con `references/` y `assets/`) a la carpeta de skills de tu agente dentro de tu proyecto:
+Díganle al agente: "Descarga e instala estas skills: https://github.com/DweskZ/spookython-skills". El agente copia la carpeta.
+
+A mano, la carpeta `jurado-spookython` completa (con `references/` y `assets/`) va en la carpeta de skills del proyecto:
 
 | Agente | Carpeta |
 | --- | --- |
