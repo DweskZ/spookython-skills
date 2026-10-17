@@ -24,6 +24,14 @@ Equipos de 1 a 3 personas. Los proyectos se construyen desde cero. Entre el cier
 
 Ponderación: no publicada. El jurado simulado puntúa cada criterio de 0 a 10 y promedia los cuatro. Si el equipo pregunta por pesos, responder que no se publican y que la estrategia correcta es no descuidar ninguno.
 
+| Nota | Qué significa |
+| --- | --- |
+| 0 a 3 | El criterio no aparece. |
+| 4 a 5 | Lo nombran y no lo muestran. |
+| 6 a 7 | Está, y le falta la pieza clave: el número con fuente, el propósito de cada servicio, o la demo corriendo. |
+| 8 a 9 | La pieza clave está y es concreta. |
+| 10 | Un jurado podría comprobarlo ahora: demo en vivo o video, fuente del número, o la URL desplegada. |
+
 ## Lo que suele restar en cualquier reto
 
 - Un problema que nadie tiene: no hay persona, no hay contraste, no hay impacto.

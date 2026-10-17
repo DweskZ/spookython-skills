@@ -1,52 +1,52 @@
 ---
 name: constructor-pitch
-description: "Trigger: armar pitch, construir pitch, escribir mi pitch, guion del pitch, diapositivas del pitch, SpookyThon. Builds a 5-minute SpookyThon pitch script from facts the team supplies; never invents user, numbers or demo."
+description: "Trigger: armar pitch, construir pitch, escribir mi pitch, guion del pitch, diapositivas del pitch, SpookyThon. Builds a 5-minute SpookyThon pitch from facts the team supplies; never invents the user, numbers, or demo."
 license: Apache-2.0
 metadata:
   author: "DweskZ"
-  version: "1.1"
+  version: "1.2"
 ---
 
 ## Activation Contract
 
-Load when a SpookyThon 2026 team asks to write, build, structure, or draft its 5-minute pitch, its script, or its slide list.
+Load when a SpookyThon 2026 team asks to write, build, structure, or draft its 5-minute pitch, its script, or its slide content.
 
 ## Hard Rules
 
 - Reply in neutral Spanish. Write the script in the team's voice, first person plural.
-- Do not build until the team states its challenge in one sentence and its user in one sentence: a concrete person with a role and a situation. "Todos", "la comunidad", "los ciudadanos" is not a user. Ask again and stop.
-- Never invent the person, the contrast numbers, the demo flow, the AWS services, or the cost. Collect them with `references/entrevista.md`. Anything the team does not give becomes `[PENDIENTE: qué falta]` in the script, never a made-up value.
-- Ask for every missing input in one grouped message, then stop. Never one question per turn.
-- The spoken script targets 400 to 500 words. Hard ceiling: 550. The demo block is about two minutes of showing, not reading, so a 700-word script leaves no time to show it. Report the word count and the estimated spoken time at 140 words per minute.
-- Maximum 10 slides, one idea per slide, no list longer than three items.
+- A user is one named person, with a role, a place, and a moment. "Todos", "la comunidad", "los ciudadanos", "los dueños", "los clientes", "la gente" or "los usuarios" is not a user. Ask for a name and stop.
+- Never invent the person, the contrast numbers, their source, the demo flow, the momento wow, the AWS services, or the cost. A number without a source the team stated is `[PENDIENTE: fuente]`, not a line in the script.
+- Ask for every missing input in one grouped message, then stop. Do not continue to a later step in that same reply.
+- Spoken words, excluding headings and `[PENDIENTE]` markers: target 400 to 500, ceiling 550. Tramo 4 narration stays under 80 words, because the team shows that block. Report the count and the time at 140 words per minute.
+- Maximum 10 slides, one idea per slide, no list longer than three items. Return the markdown template only.
 - Use only the four public criteria in `references/criterios-publicos.md`.
-- Do not score or evaluate the pitch. Point the team to the `jurado-spookython` skill for that.
+- Do not score the pitch. The last line points the team to `jurado-spookython`.
 
 ## Decision Gates
 
 | Input | Action |
 |---|---|
-| No challenge sentence or no user sentence | Ask only for the missing gate item, then stop |
-| Gate passed, inputs missing | Extract every input already present in what the team wrote. Send the grouped interview from `references/entrevista.md` for the missing items only, then stop |
-| All inputs present, or the team accepts placeholders | Build the script with `assets/guion-pitch.md` |
-| Team asks to shorten or change one part | Edit only the named tramo and keep the rest |
+| No challenge sentence, or the user has no name | Ask only for the missing gate item, then stop |
+| Gate passed, any of the ten inputs missing | Extract what they already wrote. Ask `references/entrevista.md` for the missing items only, then stop |
+| All inputs present, or the team says to continue with placeholders | Build with `assets/guion-pitch.md` |
+| Team asks to change one tramo | Edit only that tramo |
 
 ## Execution Steps
 
-1. Gate: if the message already contains the challenge in one sentence and a concrete person, extract both and continue. If either is missing or the person is "todos", "la comunidad" or "los ciudadanos", ask only for the missing gate item, then stop.
-2. Check the ten inputs in `references/entrevista.md` against what the team already wrote. Ask once, only for what is missing.
-3. Write the seven tramos in `references/estructura-pitch.md` with their time marks, using only the team's facts. Call the demo's peak "momento wow".
-4. Count spoken words. Aim for 400 to 500. If over 550, cut from tramos 5 and 6 first. Never cut tramos 1, 4, or 7. Keep tramo 4 short: the team shows that part.
-5. Derive the slide list (max 10) and the speaker notes from the script. Assign who speaks each tramo from the team roles.
-6. Deliver with `assets/guion-pitch.md` and close with one line suggesting the team run `jurado-spookython` on the result.
+1. Gate. Stop if it fails.
+2. Match the ten inputs in `references/entrevista.md` to the message. Ask once for the gaps. Stop.
+3. Write the seven tramos in `references/estructura-pitch.md` from the team's facts only. Name the demo peak "momento wow". If they did not describe one, mark `[PENDIENTE: momento wow]` and do not invent it.
+4. Count spoken words only. If over 550, cut tramos 5 and 6 first. Shorten tramo 4 narration to under 80 words without deleting the flow.
+5. Derive at most 10 slides and the speaker notes. Assign speakers from the roles they gave. If roles are missing, use one speaker and `[PENDIENTE: quién habla]`.
+6. Deliver `assets/guion-pitch.md`. Before sending, check that every number in the script appears with its source under Datos usados. If it does not, replace it with `[PENDIENTE: fuente]`.
 
 ## Output Contract
 
-Markdown in Spanish following `assets/guion-pitch.md`: Datos usados, Guion por tramo con tiempos y quién habla, Lista de diapositivas, Notas para el presentador, Conteo de palabras y tiempo, Pendientes.
+Markdown in Spanish, only the sections in `assets/guion-pitch.md`: Datos usados, Guion por tramo, Diapositivas, Notas para el presentador, Conteo, Pendientes. Close with one line telling the team to run `jurado-spookython` on this script.
 
 ## References
 
 - `references/entrevista.md` — the ten inputs the team must supply and the exact question for each.
 - `references/estructura-pitch.md` — the seven tramos with times, principles, and criteria.
-- `references/criterios-publicos.md` — the four public criteria, deliverables, and dates.
+- `references/criterios-publicos.md` — the four public criteria, deliverables, dates, and score anchors.
 - `assets/guion-pitch.md` — output template.
