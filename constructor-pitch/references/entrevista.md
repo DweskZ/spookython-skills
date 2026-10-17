@@ -1,6 +1,6 @@
 # Los diez datos que el equipo tiene que dar
 
-El constructor no inventa ninguno de estos. Si falta alguno, se pregunta una sola vez, todos juntos, y se espera. Si el equipo decide seguir sin un dato, ese dato queda como `[PENDIENTE: ...]` en el guion. Una persona sin nombre no cuenta y se vuelve a la puerta. Un número sin fuente no cuenta y queda `[PENDIENTE: fuente]`.
+El constructor no inventa ninguno de estos. Si falta alguno, se pregunta una sola vez, todos juntos, y se espera. Si el equipo decide seguir sin un dato, ese dato queda como `[PENDIENTE: ...]` en Pendientes, no como una frase del guion. Una persona sin nombre no se inventa. El rol que el proyecto ya dice sí se puede hablar. Un número sin fuente no cuenta y queda `[PENDIENTE: fuente]`.
 
 | # | Dato | Pregunta exacta | Por qué no se inventa | Tramo |
 | --- | --- | --- | --- | --- |
